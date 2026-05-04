@@ -112,6 +112,9 @@ export default function Home() {
           sourceDrawing.mode === "map" && sourceDrawing.mapCenter
             ? { lat: sourceDrawing.mapCenter[0], lon: sourceDrawing.mapCenter[1] }
             : sourceDrawing.location ?? undefined;
+        if (!saved.constraints) {
+          throw new Error("Constraints are missing. Please complete the constraints step.");
+        }
         const yieldResult = await api.estimateYield(saved.layout, saved.constraints, location);
         setYieldResult(yieldResult);
       }
