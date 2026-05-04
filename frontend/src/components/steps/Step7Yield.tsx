@@ -34,7 +34,7 @@ export function Step7Yield() {
     setLoading(true);
     setError(null);
     try {
-      const result = await api.estimateYield(layout, constraints, drawing.location, inverter);
+      const result = await api.estimateYield(layout, constraints, drawing.location, inverter ?? undefined);
       setYieldResult(result);
       saveSection("yield");
     } catch (e) {
