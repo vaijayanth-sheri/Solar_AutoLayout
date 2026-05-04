@@ -102,22 +102,22 @@ export function DrawingMap({ drawing, drawType, onChange, onMapCenterChange, rea
 
     drawing.installable.forEach((polygon) => {
       const layer = L.polygon(polygon.coordinates, { color: DRAW_COLORS.installable });
-      layer.options.customType = "installable";
-      layer.options.featureId = polygon.id;
+      (layer.options as any).customType = "installable";
+      (layer.options as any).featureId = polygon.id;
       group.addLayer(layer);
     });
 
     drawing.obstacles.forEach((polygon) => {
       const layer = L.polygon(polygon.coordinates, { color: DRAW_COLORS.obstacle });
-      layer.options.customType = "obstacle";
-      layer.options.featureId = polygon.id;
+      (layer.options as any).customType = "obstacle";
+      (layer.options as any).featureId = polygon.id;
       group.addLayer(layer);
     });
 
     if (drawing.referenceLine) {
       const layer = L.polyline(drawing.referenceLine.coordinates, { color: DRAW_COLORS.reference });
-      layer.options.customType = "reference";
-      layer.options.featureId = drawing.referenceLine.id;
+      (layer.options as any).customType = "reference";
+      (layer.options as any).featureId = drawing.referenceLine.id;
       group.addLayer(layer);
     }
   }, [drawing.installable, drawing.obstacles, drawing.referenceLine, readonly]);
