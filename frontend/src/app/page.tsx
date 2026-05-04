@@ -83,6 +83,7 @@ export default function Home() {
         saveSection("inverter");
       }
       if (currentStep === 5) {
+        if (!draft.constraints) throw new Error("Constraints are missing.");
         const result = validateConstraints(draft.constraints);
         if (!result.success) throw new Error(result.message);
         saveSection("constraints");
