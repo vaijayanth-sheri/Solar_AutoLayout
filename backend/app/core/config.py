@@ -1,0 +1,5 @@
+PVGIS_BASE_URL = "https://re.jrc.ec.europa.eu/api/v5_2/PVcalc"
+DEFAULT_TILT = 30
+DEFAULT_AZIMUTH = 180
+MIN_DC_AC_RATIO = 1.1
+MAX_DC_AC_RATIO = 1.3

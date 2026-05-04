@@ -1,0 +1,43 @@
+# Python
+backend/.venv/
+backend/__pycache__/
+backend/*.pyc
+backend/*.pyo
+backend/*.pyd
+backend/.Python
+backend/env/
+backend/venv/
+backend/pip-log.txt
+backend/pip-delete-this-directory.txt
+
+# Node
+frontend/node_modules/
+frontend/.next/
+frontend/out/
+frontend/build/
+frontend/.vercel
+frontend/.env
+frontend/.env.local
+frontend/.env.development.local
+frontend/.env.test.local
+frontend/.env.production.local
+
+# Project Specific
+*.dxf
+*.pdf
+*.csv
+*.png
+*.json
+!package.json
+!tsconfig.json
+!next.config.mjs
+!tailwind.config.ts
+!postcss.config.mjs
+!backend/requirements.txt
+
+# OS
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+.gemini/
